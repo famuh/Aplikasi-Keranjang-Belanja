@@ -103,10 +103,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 
                 SizedBox(height: defaultPadding),
-            ],
-          ),
-        ),
-      )),
+
+                const Divider(),
+                const Text(
+                  'Klik tombol dibawah untuk contoh penggunaan Provider',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 12, color: Colors.black45)),
+
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => produkScreen2()));
+                  },
+                  child: Text('Provider'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue,
+                    minimumSize: Size( MediaQuery.of(context).size.width / 2 + 100, 50)),
+                    ),
+
+                    const Spacer(),
+            ])),
+      ),
+      ),
     );
   }
 }

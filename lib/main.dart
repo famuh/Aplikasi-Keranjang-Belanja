@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:praktek_modul/pertemuan04/setstate/components/login_screen.dart';
+import 'package:praktek_modul/pertemuan04/setstate/components/produk_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: produkScreen(username: 'akmal',),
     );
   }
 }
