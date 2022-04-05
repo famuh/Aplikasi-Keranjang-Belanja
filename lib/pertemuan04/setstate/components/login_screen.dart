@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:praktek_modul/pertemuan04/setstate/components/produk_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -68,7 +69,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: defaultPadding), //butuh nilai variabel
 
               //login button
               ElevatedButton(onPressed: () {
@@ -92,11 +92,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   Navigator.push(context, MaterialPageRoute(builder: (context){
                     //passing data ke another screen
                     return produkScreen(
-                      username: usernameController.text);
+                      username : usernameController.text);
                   }));
                 }
               },
-              child: Text(loginText))
+              child: Text(loginText),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(
+                  MediaQuery.of(context).size.width / 2 + 100, 50)),
+                ),
+                
+                SizedBox(height: defaultPadding),
             ],
           ),
         ),
