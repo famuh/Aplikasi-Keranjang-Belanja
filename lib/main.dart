@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
         
       ),
-      home: KeranjangScreen(),
+      home: KeranjangScreen(keranjang: keranjang),
     );
   }
 }

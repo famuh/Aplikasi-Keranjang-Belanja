@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class KeranjangScreen extends StatefulWidget {
-  KeranjangScreen({Key? key}) : super(key: key);
+  List keranjang;
+  KeranjangScreen({Key? key, required this.keranjang}) : super(key: key);
 
   @override
   State<KeranjangScreen> createState() => _KeranjangScreenState();
@@ -22,7 +23,22 @@ class _KeranjangScreenState extends State<KeranjangScreen> {
             Divider(),
 
             //list keranjang
-            
+            Column(
+              children: widget.keranjang.map((val){
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    //kiri
+                    Text(
+                      '${val['title']}',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+
+                    //kanan
+                    Text('${val['total']} item')
+                  ],
+                );
+              }).toList(),
+            )
         ],
       )),
     );
