@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:praktek_modul/pertemuan04/provider/produk2_screen.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/produk_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -111,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(fontSize: 12, color: Colors.black45)),
 
                   ElevatedButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => produkScreen2()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProdukScreen2()));
                   },
                   child: Text('Provider'),
                   style: ElevatedButton.styleFrom(

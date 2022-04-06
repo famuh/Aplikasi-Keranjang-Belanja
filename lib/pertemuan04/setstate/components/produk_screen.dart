@@ -176,14 +176,3 @@ class _produkScreenState extends State<produkScreen> {
     );
   }
 }
-
-//=================================
-
-class produkScreen2 extends StatelessWidget {
-  const produkScreen2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
