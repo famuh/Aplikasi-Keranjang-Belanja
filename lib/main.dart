@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:praktek_modul/pertemuan04/setstate/components/keranjang_screen.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/produk_screen.dart';
 
 void main() {
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightGreen,
         
       ),
-      home: produkScreen(username: 'akmal',),
+      home: KeranjangScreen(),
     );
   }
 }
