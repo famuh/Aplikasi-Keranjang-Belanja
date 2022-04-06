@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/keranjang_screen.dart';
+import 'package:praktek_modul/pertemuan04/setstate/components/produk_widget.dart';
 
 class produkScreen extends StatefulWidget {
   final String username;
@@ -116,14 +117,57 @@ class _produkScreenState extends State<produkScreen> {
                           isSepatuAdd = true;
                           keranjang.add({
                             "title": 'sepatu',
-                            "total": sepatuCtrl.text
-                          });
+                            "total": sepatuCtrl.text});
                         });
                       }
                     ),
-                    ProdukWidget(),
-                    ProdukWidget(),
-                    ProdukWidget(),
+
+                    ProdukWidget(
+                      namaProduk: 'Celana',
+                      ctrl : celanaCtr,
+                      status: isCelanaAdd,
+                      press: (){
+                        print('celana');
+                        setState(() {
+                          isCelanaAdd = true;
+                          keranjang.add({
+                            "title": 'celana',
+                            "total": celanaCtr.text});
+                        });
+                      }
+                    ),
+
+                    ProdukWidget(
+                      namaProduk: 'Tas',
+                      ctrl : tasCtrl,
+                      status: isTasAdd,
+                      press: (){
+                        print('tas');
+                        setState(() {
+                          isTasAdd = true;
+                          keranjang.add({
+                            "title": 'tas',
+                            "total": tasCtrl.text});
+                        });
+                      }
+                    ),
+
+                    ProdukWidget(
+                      namaProduk: 'Baju',
+                      ctrl : bajuCtrl,
+                      status: isBajuAdd,
+                      press: (){
+                        print('baju');
+                        setState(() {
+                          isBajuAdd = true;
+                          keranjang.add({
+                            "title": 'baju',
+                            "total": bajuCtrl.text});
+                        });
+                      }
+                    ),
+
+                  
                   ])
                 ],
               )),
