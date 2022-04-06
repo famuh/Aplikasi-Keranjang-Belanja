@@ -31,12 +31,13 @@ class ProdukScreen2 extends StatelessWidget {
             ])
         ]),
         body: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               ProdukWidget(
                 ctrl: context.watch<ProdukProvider>().tasCtrl, 
                 namaProduk: 'Tas', 
+                status: context.watch<ProdukProvider>().isTasAdd,
                 press: (){
                   print('Tas');
                   context.read<ProdukProvider>().setTasStatus = true;
@@ -45,7 +46,7 @@ class ProdukScreen2 extends StatelessWidget {
                     "total": context.read<ProdukProvider>().tasCtrl.text
                   };
                 }, 
-                status: context.watch<ProdukProvider>().isTasAdd,)
+                )
             ]),),
     );
   }
