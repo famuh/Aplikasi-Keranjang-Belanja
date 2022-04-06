@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:praktek_modul/pertemuan04/provider/keranjang2_screen.dart';
+import 'package:praktek_modul/pertemuan04/provider/produk2_screen.dart';
 import 'package:praktek_modul/pertemuan04/provider/produk_provider.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/keranjang_screen.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/login_screen.dart';
 import 'package:praktek_modul/pertemuan04/setstate/components/produk_screen.dart';
+import 'package:praktek_modul/pertemuan04/studi%20kasus/keliling_screen.dart';
+import 'package:praktek_modul/pertemuan04/studi%20kasus/field_prov.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -22,8 +25,7 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(primarySwatch: Colors.lightGreen),
-          home: LoginScreen()
-          ),
+          home: KelilingScreen()),
     );
   }
 }
